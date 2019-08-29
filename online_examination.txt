@@ -1,0 +1,235 @@
+-- phpMyAdmin SQL Dump
+-- version 3.1.3.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Nov 27, 2016 at 08:43 PM
+-- Server version: 5.1.33
+-- PHP Version: 5.2.9
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `online_examination`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_tbl`
+--
+
+CREATE TABLE IF NOT EXISTS `admin_tbl` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(30) NOT NULL,
+  `password` varchar(70) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `admin_tbl`
+--
+
+INSERT INTO `admin_tbl` (`id`, `user_name`, `password`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `candidate_answer_tbl`
+--
+
+CREATE TABLE IF NOT EXISTS `candidate_answer_tbl` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login_id` varchar(30) NOT NULL,
+  `first_name` varchar(40) NOT NULL,
+  `other_name` varchar(40) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `gender` varchar(8) NOT NULL,
+  `question` text NOT NULL,
+  `your_answer` text NOT NULL,
+  `correct_answer` text NOT NULL,
+  `mark` int(11) NOT NULL,
+  `your_mark` int(11) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=132 ;
+
+--
+-- Dumping data for table `candidate_answer_tbl`
+--
+
+INSERT INTO `candidate_answer_tbl` (`id`, `login_id`, `first_name`, `other_name`, `email`, `phone`, `gender`, `question`, `your_answer`, `correct_answer`, `mark`, `your_mark`, `time`) VALUES
+(38, 'ONL132455', 'peter', 'ukpono etim', 'peter@yahoo.com', '989898', 'Male', '1 + 1', '2', '2', 5, 5, '2016-11-19 22:26:00'),
+(39, 'ONL132455', 'peter', 'ukpono etim', 'peter@yahoo.com', '989898', 'Male', ' What is the Full meaning of WHO?', 'World health occassion', 'World health organization', 5, 0, '2016-11-19 22:26:09'),
+(32, 'ONL385561', 'EFFIONG', 'OKON UDO', 'effiong@yahoo.com', '08166848344', 'Male', '12 + 4', '16', '16', 5, 5, '2016-11-19 19:15:08'),
+(31, 'ONL385561', 'EFFIONG', 'OKON UDO', 'effiong@yahoo.com', '08166848344', 'Male', 'What is the full meaning of CSC', 'Computer science', 'Computer science', 5, 5, '2016-11-19 19:14:55'),
+(30, 'ONL385561', 'EFFIONG', 'OKON UDO', 'effiong@yahoo.com', '08166848344', 'Male', '4 + 1', '5', '5', 5, 5, '2016-11-19 19:14:38'),
+(28, 'ONL385561', 'EFFIONG', 'OKON UDO', 'effiong@yahoo.com', '08166848344', 'Male', '5 + 5', '10', '10', 5, 5, '2016-11-19 19:14:08'),
+(29, 'ONL385561', 'EFFIONG', 'OKON UDO', 'effiong@yahoo.com', '08166848344', 'Male', '3 + 3', '4', '3', 5, 0, '2016-11-19 19:14:22'),
+(27, 'ONL385561', 'EFFIONG', 'OKON UDO', 'effiong@yahoo.com', '08166848344', 'Male', '      Who is the current President of Nigeria?', 'Buhari', 'Buhari', 5, 5, '2016-11-19 19:13:53'),
+(26, 'ONL385561', 'EFFIONG', 'OKON UDO', 'effiong@yahoo.com', '08166848344', 'Male', ' Computer science s concern with all except ?', 'Disk Defragmentation', 'Photography', 5, 0, '2016-11-19 19:13:39'),
+(25, 'ONL385561', 'EFFIONG', 'OKON UDO', 'effiong@yahoo.com', '08166848344', 'Male', 'Which of this is not an Anti-virus?', 'Nero', 'Nero', 5, 5, '2016-11-19 19:13:23'),
+(24, 'ONL385561', 'EFFIONG', 'OKON UDO', 'effiong@yahoo.com', '08166848344', 'Male', ' What is the Full meaning of WHO?', 'World health organization', 'World health organization', 5, 5, '2016-11-19 19:13:08'),
+(23, 'ONL385561', 'EFFIONG', 'OKON UDO', 'effiong@yahoo.com', '08166848344', 'Male', '1 + 1', '2', '2', 5, 5, '2016-11-19 19:12:54'),
+(40, 'ONL132455', 'peter', 'ukpono etim', 'peter@yahoo.com', '989898', 'Male', 'Which of this is not an Anti-virus?', 'Nero', 'Nero', 5, 5, '2016-11-19 22:26:16'),
+(41, 'ONL132455', 'peter', 'ukpono etim', 'peter@yahoo.com', '989898', 'Male', ' Computer science s concern with all except ?', 'Photography', 'Photography', 5, 5, '2016-11-19 22:26:24'),
+(42, 'ONL132455', 'peter', 'ukpono etim', 'peter@yahoo.com', '989898', 'Male', '      Who is the current President of Nigeria?', 'Odili', 'Buhari', 5, 0, '2016-11-19 22:26:31'),
+(43, 'ONL132455', 'peter', 'ukpono etim', 'peter@yahoo.com', '989898', 'Male', '5 + 5', '3', '10', 5, 0, '2016-11-19 22:26:38'),
+(44, 'ONL132455', 'peter', 'ukpono etim', 'peter@yahoo.com', '989898', 'Male', ' 3 + 3', '6', '6', 5, 5, '2016-11-19 22:26:45'),
+(45, 'ONL132455', 'peter', 'ukpono etim', 'peter@yahoo.com', '989898', 'Male', '4 + 1', '5', '5', 5, 5, '2016-11-19 22:26:53'),
+(46, 'ONL132455', 'peter', 'ukpono etim', 'peter@yahoo.com', '989898', 'Male', 'What is the full meaning of CSC', 'Computer school', 'Computer science', 5, 0, '2016-11-19 22:26:59'),
+(47, 'ONL132455', 'peter', 'ukpono etim', 'peter@yahoo.com', '989898', 'Male', '12 + 4', '16', '16', 5, 5, '2016-11-19 22:27:06'),
+(48, 'ONL210615', 'mercy', 'edet uko', 'mercy10@yahoo.com', '09099898', 'Female', 'Which of this is not an Anti-virus?', 'Avast', 'Nero', 5, 0, '2016-11-19 23:04:55'),
+(49, 'ONL210615', 'mercy', 'edet uko', 'mercy10@yahoo.com', '09099898', 'Female', ' Computer science s concern with all except ?', 'Photography', 'Photography', 5, 5, '2016-11-19 23:05:02'),
+(50, 'ONL210615', 'mercy', 'edet uko', 'mercy10@yahoo.com', '09099898', 'Female', '      Who is the current President of Nigeria?', 'Buhari', 'Buhari', 5, 5, '2016-11-19 23:05:09'),
+(51, 'ONL210615', 'mercy', 'edet uko', 'mercy10@yahoo.com', '09099898', 'Female', '5 + 5', '3', '10', 5, 0, '2016-11-19 23:05:18'),
+(52, 'ONL210615', 'mercy', 'edet uko', 'mercy10@yahoo.com', '09099898', 'Female', ' 3 + 3', '1', '6', 5, 0, '2016-11-19 23:05:27'),
+(53, 'ONL210615', 'mercy', 'edet uko', 'mercy10@yahoo.com', '09099898', 'Female', '4 + 1', '7', '5', 5, 0, '2016-11-19 23:05:33'),
+(54, 'ONL210615', 'mercy', 'edet uko', 'mercy10@yahoo.com', '09099898', 'Female', 'What is the full meaning of CSC', 'Computer science', 'Computer science', 5, 5, '2016-11-19 23:05:39'),
+(55, 'ONL210615', 'mercy', 'edet uko', 'mercy10@yahoo.com', '09099898', 'Female', '12 + 4', '16', '16', 5, 5, '2016-11-19 23:05:48'),
+(56, 'ONL209567', 'Andrew', 'Timothy Pius', 'andrew@yahoo.com', '09876545678', 'Male', '1 + 1', '2', '2', 5, 5, '2016-11-20 14:13:13'),
+(57, 'ONL209567', 'Andrew', 'Timothy Pius', 'andrew@yahoo.com', '09876545678', 'Male', ' What is the Full meaning of WHO?', 'World health occassion', 'World health organization', 5, 0, '2016-11-20 14:13:21'),
+(58, 'ONL209567', 'Andrew', 'Timothy Pius', 'andrew@yahoo.com', '09876545678', 'Male', 'Which of this is not an Anti-virus?', 'Nero', 'Nero', 5, 5, '2016-11-20 14:13:27'),
+(59, 'ONL209567', 'Andrew', 'Timothy Pius', 'andrew@yahoo.com', '09876545678', 'Male', ' Computer science s concern with all except ?', 'Photography', 'Photography', 5, 5, '2016-11-20 14:13:33'),
+(60, 'ONL209567', 'Andrew', 'Timothy Pius', 'andrew@yahoo.com', '09876545678', 'Male', '      Who is the current President of Nigeria?', 'Buhari', 'Buhari', 5, 5, '2016-11-20 14:13:39'),
+(61, 'ONL209567', 'Andrew', 'Timothy Pius', 'andrew@yahoo.com', '09876545678', 'Male', '5 + 5', '10', '10', 5, 5, '2016-11-20 14:13:45'),
+(62, 'ONL209567', 'Andrew', 'Timothy Pius', 'andrew@yahoo.com', '09876545678', 'Male', ' 3 + 3', '6', '6', 5, 5, '2016-11-20 14:13:49'),
+(63, 'ONL209567', 'Andrew', 'Timothy Pius', 'andrew@yahoo.com', '09876545678', 'Male', '4 + 1', '5', '5', 5, 5, '2016-11-20 14:13:53'),
+(64, 'ONL209567', 'Andrew', 'Timothy Pius', 'andrew@yahoo.com', '09876545678', 'Male', 'What is the full meaning of CSC', 'Computer science', 'Computer science', 5, 5, '2016-11-20 14:14:00'),
+(65, 'ONL209567', 'Andrew', 'Timothy Pius', 'andrew@yahoo.com', '09876545678', 'Male', '12 + 4', '16', '16', 5, 5, '2016-11-20 14:14:06'),
+(66, 'ONL334536', 'Imoh', 'Victor Bassey', 'imoh@yahoo.com', '098765456', 'Male', '1 + 1', '2', '2', 5, 5, '2016-11-20 19:16:50'),
+(67, 'ONL334536', 'Imoh', 'Victor Bassey', 'imoh@yahoo.com', '098765456', 'Male', ' What is the Full meaning of WHO?', 'World health organization', 'World health organization', 5, 5, '2016-11-20 19:16:58'),
+(68, 'ONL334536', 'Imoh', 'Victor Bassey', 'imoh@yahoo.com', '098765456', 'Male', 'Which of this is not an Anti-virus?', 'Nero', 'Nero', 5, 5, '2016-11-20 19:17:05'),
+(69, 'ONL334536', 'Imoh', 'Victor Bassey', 'imoh@yahoo.com', '098765456', 'Male', '  Computer science s concern with all Except ?', 'Photography', 'Photography', 5, 5, '2016-11-20 19:17:12'),
+(70, 'ONL334536', 'Imoh', 'Victor Bassey', 'imoh@yahoo.com', '098765456', 'Male', '      Who is the current President of Nigeria?', 'Buhari', 'Buhari', 5, 5, '2016-11-20 19:17:19'),
+(71, 'ONL334536', 'Imoh', 'Victor Bassey', 'imoh@yahoo.com', '098765456', 'Male', '5 + 5', '10', '10', 5, 5, '2016-11-20 19:17:26'),
+(72, 'ONL334536', 'Imoh', 'Victor Bassey', 'imoh@yahoo.com', '098765456', 'Male', '4 + 1', '5', '5', 5, 5, '2016-11-20 19:17:42'),
+(73, 'ONL334536', 'Imoh', 'Victor Bassey', 'imoh@yahoo.com', '098765456', 'Male', 'What is the full meaning of CSC', 'Computer seen', 'Computer science', 5, 0, '2016-11-20 19:17:48'),
+(74, 'ONL334536', 'Imoh', 'Victor Bassey', 'imoh@yahoo.com', '098765456', 'Male', '12 + 4', '16', '16', 5, 5, '2016-11-20 19:17:54'),
+(75, 'ONL254400', 'Mbaba', 'Ubong Etim', 'mbaba@yahoo.com', '087650987', 'Male', '1 + 1', '2', '2', 5, 5, '2016-11-21 09:19:21'),
+(76, 'ONL254400', 'Mbaba', 'Ubong Etim', 'mbaba@yahoo.com', '087650987', 'Male', ' What is the Full meaning of WHO?', 'World health occassion', 'World health organization', 5, 0, '2016-11-21 09:19:29'),
+(77, 'ONL254400', 'Mbaba', 'Ubong Etim', 'mbaba@yahoo.com', '087650987', 'Male', 'Which of this is not an Anti-virus?', 'Nero', 'Nero', 5, 5, '2016-11-21 09:19:37'),
+(78, 'ONL254400', 'Mbaba', 'Ubong Etim', 'mbaba@yahoo.com', '087650987', 'Male', '  Computer science s concern with all Except ?', 'Cryptography', 'Photography', 5, 0, '2016-11-21 09:19:43'),
+(79, 'ONL254400', 'Mbaba', 'Ubong Etim', 'mbaba@yahoo.com', '087650987', 'Male', '5 + 5', '10', '10', 5, 5, '2016-11-21 09:19:59'),
+(80, 'ONL254400', 'Mbaba', 'Ubong Etim', 'mbaba@yahoo.com', '087650987', 'Male', ' 3 + 3', '6', '6', 5, 5, '2016-11-21 09:20:03'),
+(81, 'ONL254400', 'Mbaba', 'Ubong Etim', 'mbaba@yahoo.com', '087650987', 'Male', '4 + 1', '5', '5', 5, 5, '2016-11-21 09:20:08'),
+(82, 'ONL254400', 'Mbaba', 'Ubong Etim', 'mbaba@yahoo.com', '087650987', 'Male', 'What is the full meaning of CSC', 'Computer science', 'Computer science', 5, 5, '2016-11-21 09:20:12'),
+(83, 'ONL254400', 'Mbaba', 'Ubong Etim', 'mbaba@yahoo.com', '087650987', 'Male', '12 + 4', '16', '16', 5, 5, '2016-11-21 09:20:17'),
+(84, 'ONL136160', 'Edidiong', 'Asuquo', 'edidiong@yahoo.com', '0987656789', 'Male', '1 + 1', '2', '2', 5, 5, '2016-11-21 09:48:55'),
+(85, 'ONL136160', 'Edidiong', 'Asuquo', 'edidiong@yahoo.com', '0987656789', 'Male', ' What is the Full meaning of WHO?', 'World health occassion', 'World health organization', 5, 0, '2016-11-21 09:49:03'),
+(86, 'ONL136160', 'Edidiong', 'Asuquo', 'edidiong@yahoo.com', '0987656789', 'Male', 'Which of this is not an Anti-virus?', 'Nero', 'Nero', 5, 5, '2016-11-21 09:49:11'),
+(87, 'ONL136160', 'Edidiong', 'Asuquo', 'edidiong@yahoo.com', '0987656789', 'Male', '  Computer science s concern with all Except ?', 'Photography', 'Photography', 5, 5, '2016-11-21 09:49:18'),
+(88, 'ONL136160', 'Edidiong', 'Asuquo', 'edidiong@yahoo.com', '0987656789', 'Male', '      Who is the current President of Nigeria?', 'Odili', 'Buhari', 5, 0, '2016-11-21 09:49:25'),
+(89, 'ONL136160', 'Edidiong', 'Asuquo', 'edidiong@yahoo.com', '0987656789', 'Male', '5 + 5', '10', '10', 5, 5, '2016-11-21 09:49:30'),
+(90, 'ONL136160', 'Edidiong', 'Asuquo', 'edidiong@yahoo.com', '0987656789', 'Male', ' 3 + 3', '6', '6', 5, 5, '2016-11-21 09:49:35'),
+(91, 'ONL136160', 'Edidiong', 'Asuquo', 'edidiong@yahoo.com', '0987656789', 'Male', '4 + 1', '5', '5', 5, 5, '2016-11-21 09:49:41'),
+(92, 'ONL136160', 'Edidiong', 'Asuquo', 'edidiong@yahoo.com', '0987656789', 'Male', 'What is the full meaning of CSC', 'Computer science', 'Computer science', 5, 5, '2016-11-21 09:49:46'),
+(93, 'ONL136160', 'Edidiong', 'Asuquo', 'edidiong@yahoo.com', '0987656789', 'Male', '12 + 4', '16', '16', 5, 5, '2016-11-21 09:49:51'),
+(94, 'ONL178271', 'imoh ', 'pius', 'pius@yahoo.com', '09876', 'Male', '1 + 1', '2', '2', 5, 5, '2016-11-21 13:39:33'),
+(95, 'ONL178271', 'imoh ', 'pius', 'pius@yahoo.com', '09876', 'Male', ' What is the Full meaning of WHO?', 'World health occassion', 'World health organization', 5, 0, '2016-11-21 13:39:40'),
+(96, 'ONL178271', 'imoh ', 'pius', 'pius@yahoo.com', '09876', 'Male', 'Which of this is not an Anti-virus?', 'Norton', 'Nero', 5, 0, '2016-11-21 13:39:45'),
+(97, 'ONL178271', 'imoh ', 'pius', 'pius@yahoo.com', '09876', 'Male', '      Who is the current President of Nigeria?', 'Buhari', 'Buhari', 5, 5, '2016-11-21 13:40:01'),
+(98, 'ONL178271', 'imoh ', 'pius', 'pius@yahoo.com', '09876', 'Male', '5 + 5', '10', '10', 5, 5, '2016-11-21 13:40:07'),
+(99, 'ONL178271', 'imoh ', 'pius', 'pius@yahoo.com', '09876', 'Male', '4 + 1', '5', '5', 5, 5, '2016-11-21 13:40:22'),
+(100, 'ONL178271', 'imoh ', 'pius', 'pius@yahoo.com', '09876', 'Male', 'What is the full meaning of CSC', 'Computer science', 'Computer science', 5, 5, '2016-11-21 13:40:29'),
+(101, 'ONL178271', 'imoh ', 'pius', 'pius@yahoo.com', '09876', 'Male', '12 + 4', '16', '16', 5, 5, '2016-11-21 13:40:34'),
+(102, 'ONL273169', 'Jimmy', 'john', 'john@yahoo.com', '0876567890', 'Male', '1 + 1', '2', '2', 5, 5, '2016-11-23 10:20:56'),
+(103, 'ONL273169', 'Jimmy', 'john', 'john@yahoo.com', '0876567890', 'Male', ' What is the Full meaning of WHO?', 'World health organization', 'World health organization', 5, 5, '2016-11-23 10:21:05'),
+(104, 'ONL273169', 'Jimmy', 'john', 'john@yahoo.com', '0876567890', 'Male', 'Which of this is not an Anti-virus?', 'Nero', 'Nero', 5, 5, '2016-11-23 10:21:14'),
+(105, 'ONL273169', 'Jimmy', 'john', 'john@yahoo.com', '0876567890', 'Male', '  Computer science s concern with all Except ?', 'Disk Defragmentation', 'Photography', 5, 0, '2016-11-23 10:21:21'),
+(106, 'ONL273169', 'Jimmy', 'john', 'john@yahoo.com', '0876567890', 'Male', '      Who is the current President of Nigeria?', 'Buhari', 'Buhari', 5, 5, '2016-11-23 10:21:29'),
+(107, 'ONL273169', 'Jimmy', 'john', 'john@yahoo.com', '0876567890', 'Male', '5 + 5', '10', '10', 5, 5, '2016-11-23 10:21:35'),
+(108, 'ONL273169', 'Jimmy', 'john', 'john@yahoo.com', '0876567890', 'Male', ' 3 + 3', '6', '6', 5, 5, '2016-11-23 10:21:39'),
+(109, 'ONL273169', 'Jimmy', 'john', 'john@yahoo.com', '0876567890', 'Male', '4 + 1', '5', '5', 5, 5, '2016-11-23 10:21:44'),
+(110, 'ONL273169', 'Jimmy', 'john', 'john@yahoo.com', '0876567890', 'Male', 'What is the full meaning of CSC', 'Computer science', 'Computer science', 5, 5, '2016-11-23 10:21:50'),
+(111, 'ONL273169', 'Jimmy', 'john', 'john@yahoo.com', '0876567890', 'Male', '12 + 4', '16', '16', 5, 5, '2016-11-23 10:21:55'),
+(112, 'ONL231189', 'Jack', 'Ukeme', 'jack@yahoo.com', '098765', 'Male', '1 + 1', '2', '2', 5, 5, '2016-11-23 10:58:01'),
+(113, 'ONL231189', 'Jack', 'Ukeme', 'jack@yahoo.com', '098765', 'Male', ' What is the Full meaning of WHO?', 'World health organization', 'World health organization', 5, 5, '2016-11-23 10:58:07'),
+(114, 'ONL231189', 'Jack', 'Ukeme', 'jack@yahoo.com', '098765', 'Male', 'Which of this is not an Anti-virus?', 'Nero', 'Nero', 5, 5, '2016-11-23 10:58:12'),
+(115, 'ONL231189', 'Jack', 'Ukeme', 'jack@yahoo.com', '098765', 'Male', '  Computer science s concern with all Except ?', 'Disk Defragmentation', 'Photography', 5, 0, '2016-11-23 10:58:19'),
+(116, 'ONL231189', 'Jack', 'Ukeme', 'jack@yahoo.com', '098765', 'Male', '      Who is the current President of Nigeria?', 'Buhari', 'Buhari', 5, 5, '2016-11-23 10:58:23'),
+(117, 'ONL231189', 'Jack', 'Ukeme', 'jack@yahoo.com', '098765', 'Male', '5 + 5', '10', '10', 5, 5, '2016-11-23 10:58:27'),
+(118, 'ONL231189', 'Jack', 'Ukeme', 'jack@yahoo.com', '098765', 'Male', ' 3 + 3', '6', '6', 5, 5, '2016-11-23 10:58:31'),
+(119, 'ONL231189', 'Jack', 'Ukeme', 'jack@yahoo.com', '098765', 'Male', '4 + 1', '5', '5', 5, 5, '2016-11-23 10:58:37'),
+(120, 'ONL231189', 'Jack', 'Ukeme', 'jack@yahoo.com', '098765', 'Male', 'What is the full meaning of CSC', 'Computer science', 'Computer science', 5, 5, '2016-11-23 10:58:41'),
+(121, 'ONL231189', 'Jack', 'Ukeme', 'jack@yahoo.com', '098765', 'Male', '12 + 4', '16', '16', 5, 5, '2016-11-23 10:58:45'),
+(122, 'ONL371337', 'godstime', 'etim', 'jgodstim10@yahoo.com', '098768767', 'Male', '1 + 1', '2', '2', 5, 5, '2016-11-25 09:14:37'),
+(123, 'ONL371337', 'godstime', 'etim', 'jgodstim10@yahoo.com', '098768767', 'Male', ' What is the Full meaning of WHO?', 'World health organization', 'World health organization', 5, 5, '2016-11-25 09:14:42'),
+(124, 'ONL371337', 'godstime', 'etim', 'jgodstim10@yahoo.com', '098768767', 'Male', 'Which of this is not an Anti-virus?', 'Nero', 'Nero', 5, 5, '2016-11-25 09:14:47'),
+(125, 'ONL371337', 'godstime', 'etim', 'jgodstim10@yahoo.com', '098768767', 'Male', '  Computer science s concern with all Except ?', 'Photography', 'Photography', 5, 5, '2016-11-25 09:14:51'),
+(126, 'ONL371337', 'godstime', 'etim', 'jgodstim10@yahoo.com', '098768767', 'Male', '      Who is the current President of Nigeria?', 'Ojuku', 'Buhari', 5, 0, '2016-11-25 09:14:55'),
+(127, 'ONL371337', 'godstime', 'etim', 'jgodstim10@yahoo.com', '098768767', 'Male', '5 + 5', '10', '10', 5, 5, '2016-11-25 09:14:59'),
+(128, 'ONL371337', 'godstime', 'etim', 'jgodstim10@yahoo.com', '098768767', 'Male', ' 3 + 3', '6', '6', 5, 5, '2016-11-25 09:15:06'),
+(129, 'ONL371337', 'godstime', 'etim', 'jgodstim10@yahoo.com', '098768767', 'Male', '4 + 1', '5', '5', 5, 5, '2016-11-25 09:15:09'),
+(130, 'ONL371337', 'godstime', 'etim', 'jgodstim10@yahoo.com', '098768767', 'Male', 'What is the full meaning of CSC', 'Computer science', 'Computer science', 5, 5, '2016-11-25 09:15:12'),
+(131, 'ONL371337', 'godstime', 'etim', 'jgodstim10@yahoo.com', '098768767', 'Male', '12 + 4', '16', '16', 5, 5, '2016-11-25 09:15:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `candidate_tbl`
+--
+
+CREATE TABLE IF NOT EXISTS `candidate_tbl` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login_id` varchar(30) NOT NULL,
+  `first_name` varchar(40) NOT NULL,
+  `other_name` varchar(40) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `gender` varchar(8) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `candidate_tbl`
+--
+
+INSERT INTO `candidate_tbl` (`id`, `login_id`, `first_name`, `other_name`, `email`, `phone`, `gender`) VALUES
+(1, 'ONL385561', 'EFFIONG', 'OKON UDO', 'effiong@yahoo.com', '08166848344', 'Male'),
+(2, 'ONL210615', 'mercy', 'edet uko', 'mercy10@yahoo.com', '09099898', 'Female'),
+(3, 'ONL132455', 'peter', 'ukpono etim', 'peter@yahoo.com', '989898', 'Male'),
+(4, 'ONL209567', 'Andrew', 'Timothy Pius', 'andrew@yahoo.com', '09876545678', 'Male'),
+(5, 'ONL334536', 'Imoh', 'Victor Bassey', 'imoh@yahoo.com', '098765456', 'Male'),
+(6, 'ONL254400', 'Mbaba', 'Ubong Etim', 'mbaba@yahoo.com', '087650987', 'Male'),
+(7, 'ONL136160', 'Edidiong', 'Asuquo', 'edidiong@yahoo.com', '0987656789', 'Male'),
+(8, 'ONL178271', 'imoh ', 'pius', 'pius@yahoo.com', '09876', 'Male'),
+(9, 'ONL273169', 'Jimmy', 'john', 'john@yahoo.com', '0876567890', 'Male'),
+(10, 'ONL231189', 'Jack', 'Ukeme', 'jack@yahoo.com', '098765', 'Male'),
+(11, 'ONL371337', 'godstime', 'etim', 'jgodstim10@yahoo.com', '098768767', 'Male');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `questions_tbl`
+--
+
+CREATE TABLE IF NOT EXISTS `questions_tbl` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `question` text NOT NULL,
+  `optiona` text NOT NULL,
+  `optionb` text NOT NULL,
+  `optionc` text NOT NULL,
+  `optiond` text NOT NULL,
+  `correct_answer` text NOT NULL,
+  `mark` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- Dumping data for table `questions_tbl`
+--
+
+INSERT INTO `questions_tbl` (`id`, `question`, `optiona`, `optionb`, `optionc`, `optiond`, `correct_answer`, `mark`) VALUES
+(1, '1 + 1', '1', '2', '3', '4', '2', 5),
+(2, ' What is the Full meaning of WHO?', 'World health occassion', 'World health organization', 'World health occupation', 'World health ochestration', 'World health organization', 5),
+(3, 'Which of this is not an Anti-virus?', 'Avast', 'Kerspaskey', 'Norton', 'Nero', 'Nero', 5),
+(4, '  Computer science s concern with all Except ?', 'Photography', 'Disk Defragmentation', 'Cryptography', 'Password Encryption', 'Photography', 5),
+(5, '      Who is the current President of Nigeria?', 'Good luck jonathan ', 'Buhari', 'Odili', 'Ojuku', 'Buhari', 5),
+(6, '5 + 5', '3', '5', '9', '10', '10', 5),
+(7, ' 3 + 3', '1', '2', '6', '4', '6', 5),
+(8, '4 + 1', '2', '4', '5', '7', '5', 5),
+(9, 'What is the full meaning of CSC', 'Computer science', 'Computer seen', 'Computer sata', 'Computer school', 'Computer science', 5),
+(10, '12 + 4', '56', '12', '16', '12', '16', 5);
